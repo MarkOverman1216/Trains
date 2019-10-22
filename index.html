@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Trains</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.css" />
+    <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-database.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script src="https://code.jquery.com/jquery.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Anytime is Train Time</h1>
+
+      <table class="table is-striped is-fullwidth">
+        <thead>
+          <tr>
+            <th>Train Name</th>
+            <th>Destination</th>
+            <th>Frequency (min)</th>
+            <th>Next Arrival</th>
+            <th>Minutes Away</th>
+          </tr>
+        </thead>
+        <tbody id="trains"></tbody>
+      </table>
+      <div class="field">
+        <label class="label">Train Name</label>
+        <div class="control">
+          <input class="input" type="text" id="trainName" />
+        </div>
+      </div>
+
+      <div class="field">
+        <label class="label">Destination</label>
+        <div class="control">
+          <input class="input" type="text" id="destination" />
+        </div>
+      </div>
+
+      <div class="field">
+        <label class="label">First Train Time (HH:mm - military time)</label>
+        <div class="control">
+          <input class="input" type="text" id="firstTrainTime" />
+        </div>
+      </div>
+
+      <div class="field">
+        <label class="label">Frequency (min)</label>
+        <div class="control">
+          <input class="input" type="text" id="frequency" />
+        </div>
+      </div>
+
+      <div class="field is-grouped">
+        <div class="control">
+          <button class="button is-link" id="addTrain">Submit</button>
+        </div>
+      </div>
+    </div>
+    <script src="assets/javascript/app.js"></script>
+  </body>
+</html>
